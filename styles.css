@@ -26,8 +26,10 @@
   line-height: 1.75;
   caret-color: var(--text-accent);
   box-sizing: border-box;
-  /* no box-shadow, no border */
-  box-shadow: none !important;
+}
+
+.freewrite-container .freewrite-editor {
+  box-shadow: none;
 }
 
 .freewrite-editor::placeholder {
