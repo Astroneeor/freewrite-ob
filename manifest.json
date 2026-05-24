@@ -1,7 +1,7 @@
 {
   "id": "freewrite",
   "name": "Freewrite",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "minAppVersion": "1.4.0",
   "description": "Timer-based distraction-free writing sessions saved as markdown notes.",
   "author": "Astroneeor",
