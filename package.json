@@ -8,7 +8,7 @@
     "build": "node esbuild.config.mjs production && node deploy.mjs"
   },
   "keywords": [],
-  "author": "nerro",
+  "author": "Astroneeor",
   "license": "MIT",
   "devDependencies": {
     "@types/node": "^20.0.0",
