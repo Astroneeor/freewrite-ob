@@ -1,0 +1,20 @@
+{
+  "name": "freewrite",
+  "version": "1.0.0",
+  "description": "Timer-based distraction-free writing sessions for Obsidian",
+  "main": "main.js",
+  "scripts": {
+    "dev": "node esbuild.config.mjs",
+    "build": "node esbuild.config.mjs production && node deploy.mjs"
+  },
+  "keywords": [],
+  "author": "nerro",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "esbuild": "^0.21.0",
+    "obsidian": "^1.7.4",
+    "tslib": "^2.6.0",
+    "typescript": "^5.4.0"
+  }
+}

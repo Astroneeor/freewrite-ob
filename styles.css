@@ -1,0 +1,147 @@
+/* ── Container ──────────────────────────────────────────────────────────── */
+
+.freewrite-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  background-color: var(--background-primary);
+  position: relative;
+  overflow: hidden;
+}
+
+/* ── Editor ─────────────────────────────────────────────────────────────── */
+
+.freewrite-editor {
+  flex: 1;
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 48px 24px 96px;
+  border: none;
+  outline: none;
+  resize: none;
+  background: transparent;
+  color: var(--text-normal);
+  font-size: 18px;
+  line-height: 1.75;
+  caret-color: var(--text-accent);
+  box-sizing: border-box;
+  /* no box-shadow, no border */
+  box-shadow: none !important;
+}
+
+.freewrite-editor::placeholder {
+  color: var(--text-faint);
+}
+
+.freewrite-editor:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+/* ── Toolbar ─────────────────────────────────────────────────────────────── */
+
+.freewrite-toolbar {
+  position: sticky;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 16px;
+  background-color: var(--background-secondary);
+  border-top: 1px solid var(--background-modifier-border);
+  gap: 12px;
+  z-index: 10;
+
+  opacity: 1;
+  pointer-events: all;
+  transition: opacity 0.6s ease;
+}
+
+.freewrite-toolbar--hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.freewrite-toolbar-group {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.freewrite-toolbar-center {
+  gap: 10px;
+}
+
+/* ── Buttons ─────────────────────────────────────────────────────────────── */
+
+.freewrite-btn {
+  background: none;
+  border: 1px solid var(--background-modifier-border);
+  border-radius: 4px;
+  color: var(--text-muted);
+  cursor: pointer;
+  font-size: 12px;
+  padding: 4px 10px;
+  line-height: 1.4;
+  transition: color 0.15s, background-color 0.15s, border-color 0.15s;
+  font-family: inherit;
+}
+
+.freewrite-btn:hover {
+  color: var(--text-normal);
+  background-color: var(--background-modifier-hover);
+  border-color: var(--text-muted);
+}
+
+/* ── Timer preset pills ──────────────────────────────────────────────────── */
+
+.freewrite-presets {
+  display: flex;
+  gap: 4px;
+}
+
+.freewrite-preset-btn {
+  padding: 3px 8px;
+  border-radius: 10px;
+  font-size: 11px;
+}
+
+/* ── Timer display ───────────────────────────────────────────────────────── */
+
+.freewrite-timer {
+  font-size: 13px;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+  min-width: 44px;
+  text-align: center;
+  font-family: var(--font-monospace);
+}
+
+/* ── Start button ────────────────────────────────────────────────────────── */
+
+.freewrite-start-btn {
+  color: var(--color-accent);
+  border-color: var(--color-accent);
+  font-weight: 600;
+  padding: 4px 14px;
+}
+
+.freewrite-start-btn:hover {
+  background-color: var(--color-accent);
+  color: var(--text-on-accent);
+  border-color: var(--color-accent);
+}
+
+/* ── Timer completion flash ──────────────────────────────────────────────── */
+
+@keyframes freewrite-flash {
+  0%, 100% { color: var(--text-muted); }
+  50%       { color: var(--color-green, #4CAF50); }
+}
+
+.freewrite-timer--complete {
+  animation: freewrite-flash 0.65s ease-in-out 4;
+}
